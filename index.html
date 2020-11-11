@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+  <link rel="stylesheet" href="./lib/css/highcharts.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        Patient Name:
+        <span class="banner-value" id="patient_name">..</span>
+        Gender:
+        <span class="banner-value" id="gender">..</span>
+        DOB:
+        <span class="banner-value" id="dob">..</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-overview">
+          <div class="small-card">
+              <div class="row">
+                  <div>Height</div>
+                  <div class="ob-value" id="height">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="height (cm)" id="add-height">
+                  <button class="vitals-button" id="add-height-button">Add</button>
+              </div>
+          </div>
+          <div class="small-card">
+              <div class="row">
+                  <div>Weight</div>
+                  <div class="ob-value" id="weight">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="weight (kg)" id="add-weight">
+                  <button class="vitals-button" id="add-weight-button">Add</button>
+              </div>
+          </div>
+          <div class="small-card">
+              <div class="row">
+                  <div>BMI</div>
+                  <div class="ob-value" id="bmi">undefined</div>
+              </div>
+          </div>
+      </div>
+      <figure class="highcharts-figure inline">
+          <div id="height-container"></div>
+      </figure>
+      <figure class="highcharts-figure inline">
+          <div id="weight-container"></div>
+      </figure>
+      <figure class="highcharts-figure">
+          <div id="bmi-container"></div>
+      </figure>
+      <div class="main-overview">
+          <div class="small-card">
+              <div class="row">
+                  <div>Systolic Blood Pressure</div>
+                  <div class="ob-value" id="sys">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="Systolic Blood Pressure (mmHg)" id="add-sys-bp">
+              </div>
+          </div>
+          <div class="small-card">
+              <div class="row">
+                  <div>Diastolic Blood Pressure</div>
+                  <div class="ob-value" id="dia">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="Diastolic Blood Pressure (mmHg)" id="add-dia-bp">
+                  <button class="vitals-button" id="add-bp-button">Add</button>
+              </div>
+          </div>
+      </div>
+      <figure class="highcharts-figure">
+        <div id="bp-container"></div>
+        </figure>
+      <div class="main-overview">
+          <div class="small-card">
+              <div class="row">
+                  <div>LDL</div>
+                  <div class="ob-value" id="ldl">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="LDL (mg/dL)" id="add-ldl">
+                  <button class="vitals-button" id="add-ldl-button">Add</button>
+              </div>
+          </div>
+          <div class="small-card">
+              <div class="row">
+                  <div>HDL</div>
+                  <div class="ob-value" id="hdl">undefined</div>
+              </div>
+              <div class="row">
+                  <input class="vitals-box" placeholder="HDL (mg/dL)" id="add-hdl">
+                  <button class="vitals-button" id="add-hdl-button">Add</button>
+              </div>
+          </div>
+      </div>
+      <figure class="highcharts-figure inline">
+        <div id="ldl-container"></div>
+        </figure>
+  <figure class="highcharts-figure inline">
+  <div id="hdl-container"></div>
+  </figure>
+  </main>
+  </div>
+
+
+
+  <script src='./lib/js/fhir-client.js'></script>
+  <script src="./lib/js/highcharts.js"></script>
+  <script src="./lib/js/series-label.js"></script>
+
+  <script src="./lib/js/get-data.js"></script>
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+  <!-- <script src="./lib/js/get-data-test.js"></script> -->
+</body>
+
+</html>
