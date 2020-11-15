@@ -4,6 +4,39 @@
 <head>
   <link rel="stylesheet" href="./lib/css/styles.css">
   <link rel="stylesheet" href="./lib/css/highcharts.css">
+
+     <!-- template for the modal component -->
+     <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+          <div class="modal-mask">
+            <div class="modal-wrapper">
+              <div class="modal-container">
+  
+                <div class="modal-header">
+                  <slot name="header">
+                    {{modalHeader}}
+                  </slot>
+                </div>
+  
+                <div class="modal-body">
+                  <slot name="body">
+                    {{modalBody}}
+                  </slot>
+                </div>
+  
+                <div class="modal-footer">
+                  <slot name="footer">
+                    {{modalFooter}}
+                    <button class="modal-default-button" @click="$emit('close')">
+                      OK
+                    </button>
+                  </slot>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </script>
 </head>
 
 <body>
@@ -21,6 +54,7 @@
     </header>
 
     <main class="main">
+        <modal v-if="showModal" @close="hideModal"></modal>
       <div class="main-overview">
           <div class="small-card">
               <div class="row">
@@ -28,7 +62,7 @@
                   <div class="ob-value" id="height">{{height}}</div>
               </div>
               <div class="row">
-                  <input class="vitals-box" placeholder="height (cm)" id="add-height">
+                  <input type="number" class="vitals-box" placeholder="height (cm)" id="add-height">
                   <button class="vitals-button" id="add-height-button">Add</button>
               </div>
           </div>
