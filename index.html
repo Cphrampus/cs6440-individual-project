@@ -64,7 +64,7 @@
                                 <div class="ob-value" id="height">{{height}}</div>
                             </div>
                             <div class="row">
-                                <input type="number" class="vitals-box" placeholder="height (cm)" id="add-height">
+                                <input class="vitals-box" placeholder="height (cm)" id="add-height">
                                 <button class="vitals-button" id="add-height-button">Add</button>
                             </div>
                         </div>
@@ -147,8 +147,12 @@
                         <div id="hdl-container"></div>
                     </figure>
                 </tab>
-                <tab name="Resources">
-                    Resources and stuff
+                <tab name="Resources" v-if="showResources">
+                    <ul>
+                        <li v-for="value in high_values">
+                            <div>{{ value.name }}({{ value.type }})</div>
+                        </li>
+                      </ul>
                 </tab>
             </tabs>
         </main>
