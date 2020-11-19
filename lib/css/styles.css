@@ -181,6 +181,24 @@ figure.highcharts-figure.inline {
   float: right;
 }
 
+body {
+  color: white !important;
+}
+
+.tabs a {
+  color: white !important;
+}
+
+.tabs a:hover {
+  color: cyan !important;
+  border-bottom-color: cyan !important;
+}
+
+.tabs li.is-active a {
+  border-bottom-color: #00d1b2 !important;
+  color: #00d1b2 !important;
+}
+
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
