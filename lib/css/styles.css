@@ -189,14 +189,35 @@ body {
   color: white !important;
 }
 
-.tabs a:hover {
+a:hover {
   color: cyan !important;
+}
+
+.tabs a:hover {
   border-bottom-color: cyan !important;
 }
 
 .tabs li.is-active a {
   border-bottom-color: #00d1b2 !important;
   color: #00d1b2 !important;
+}
+
+.resources-list-header {
+  text-transform: capitalize;
+  font-size: x-large;
+}
+
+.resources-page-header-text {
+  font-size: x-large;
+  text-align: center;
+}
+
+ul.resources-lists {
+  padding-top: 30px;
+}
+
+li.resources-list {
+  padding-bottom: 20px;
 }
 
 /*

@@ -146,9 +146,15 @@
                     </figure>
                 </tab>
                 <tab name="Resources" v-if="showResources">
-                    <ul>
-                        <li v-for="value in high_values">
-                            <div>{{ value.name }}({{ value.type }})</div>
+                    <span class="resources-page-header-text">Based on your measurements, here are some resources on the risks of values outside a health range.</span>
+                    <ul class="resources-lists">
+                        <li class="resources-list" v-for="value in high_values">
+                            <span class="resources-list-header">{{ value.name }}</span>
+                            <ul class="resources-links">
+                                <li class="resource-link" v-for="link in resourcesByType[value.type]">
+                                    <a :href="link.href">{{link.name}}</a>
+                                </li>
+                            </ul>
                         </li>
                       </ul>
                 </tab>
