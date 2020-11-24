@@ -153,7 +153,7 @@
                             <span class="resources-list-header">{{ value.name }}</span>
                             <ul class="resources-links">
                                 <li class="resource-link" v-for="link in resourcesByType[value.type]">
-                                    <a :href="link.href">{{link.name}}</a>
+                                    <a :href="link.href" target="_blank">{{link.name}}</a>
                                 </li>
                             </ul>
                         </li>
