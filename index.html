@@ -150,7 +150,7 @@
                     <div class="resources-page-header-text">Disclaimer: This information is provided for educational purposes only and is not intended to replace or override a professional opinion.</div>
                     <ul class="resources-lists">
                         <li class="resources-list" v-for="value in high_values">
-                            <span class="resources-list-header">{{ value.name }}</span>
+                            <span class="resources-list-header">{{ value.title }}</span>
                             <ul class="resources-links">
                                 <li class="resource-link" v-for="link in resourcesByType[value.type]">
                                     <a :href="link.href" target="_blank">{{link.name}}</a>
